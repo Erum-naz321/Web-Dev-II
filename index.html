@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A responsive student developer portfolio built with HTML, CSS and JavaScript.">
+  <title>Student Developer | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="container navigation" aria-label="Main navigation">
+      <a href="#home" class="brand">Dev<span>Portfolio</span></a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button type="button" id="theme-toggle" aria-pressed="false">Dark mode</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero container" aria-labelledby="hero-title">
+      <p class="eyebrow">HELLO, I'M A STUDENT DEVELOPER</p>
+      <h1 id="hero-title">Building ideas for the web.</h1>
+      <p class="hero-description">I'm learning to create accessible, responsive and useful websites with HTML, CSS and JavaScript.</p>
+      <a class="primary-button" href="#projects">Explore my projects</a>
+    </section>
+
+    <section id="about" class="section section-tinted">
+      <div class="container">
+        <h2>About me</h2>
+        <p>I'm a web development student interested in building clean, user-friendly digital experiences. This portfolio is a practice project for Web Development II.</p>
+      </div>
+    </section>
+
+    <section id="skills" class="section container">
+      <h2>My skills</h2>
+      <div class="card-grid">
+        <article class="card"><h3>HTML5</h3><p>Semantic structure, clear headings and accessible markup.</p></article>
+        <article class="card"><h3>CSS3</h3><p>Layouts with Grid and Flexbox, plus responsive media queries.</p></article>
+        <article class="card"><h3>JavaScript</h3><p>Interactive interfaces using events and DOM manipulation.</p></article>
+      </div>
+    </section>
+
+    <section id="projects" class="section section-tinted">
+      <div class="container">
+        <h2>Practice projects</h2>
+        <div class="card-grid">
+          <article class="card"><h3>Responsive Portfolio</h3><p>This single-page portfolio adapts to mobile and desktop screens.</p></article>
+          <article class="card"><h3>Theme Switcher</h3><p>Use the button in the navigation to switch between light and dark mode.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section container">
+      <h2>Get in touch</h2>
+      <p>Interested in collaborating or learning more about my work?</p>
+      <a class="text-link" href="mailto:student@example.com">Email me</a>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container">&copy; <span id="year"></span> Student Developer. Built with HTML, CSS and JavaScript.</div></footer>
+</body>
+</html>

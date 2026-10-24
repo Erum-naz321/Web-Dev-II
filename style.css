@@ -1,0 +1,60 @@
+:root {
+  --background: #ffffff;
+  --surface: #f1f5f9;
+  --card: #ffffff;
+  --text: #17243a;
+  --muted: #52647b;
+  --accent: #2563eb;
+  --border: #dce3ec;
+}
+
+/* Dark theme is toggled by JavaScript using a data attribute. */
+[data-theme="dark"] {
+  --background: #101827;
+  --surface: #19263a;
+  --card: #213149;
+  --text: #f4f7ff;
+  --muted: #c5d0e2;
+  --accent: #93b4ff;
+  --border: #40516b;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--background); color: var(--text); font-family: Arial, Helvetica, sans-serif; line-height: 1.6; }
+a { color: inherit; }
+button { font: inherit; cursor: pointer; }
+.container { width: min(1100px, 90%); margin-inline: auto; }
+.site-header { border-bottom: 1px solid var(--border); background: var(--background); }
+.navigation { min-height: 84px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.brand { font-weight: 800; font-size: 1.3rem; text-decoration: none; }
+.brand span { color: var(--accent); }
+.nav-links { display: flex; flex-wrap: wrap; gap: 24px; }
+.nav-links a { text-decoration: none; font-weight: 600; }
+.nav-links a:hover, .text-link:hover { text-decoration: underline; }
+#theme-toggle { background: var(--surface); color: var(--text); border: 1px solid var(--border); padding: 10px 16px; border-radius: 10px; }
+.hero { padding-block: 110px; }
+.eyebrow { font-size: .85rem; font-weight: 800; letter-spacing: .12em; color: var(--accent); }
+h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.12; max-width: 750px; margin: 16px 0; }
+h2 { font-size: 2rem; margin: 0 0 20px; }
+h3 { margin-top: 0; }
+.hero-description { max-width: 650px; font-size: 1.16rem; color: var(--muted); }
+.primary-button { display: inline-block; margin-top: 18px; padding: 12px 22px; background: #225bd3; color: white; text-decoration: none; border-radius: 10px; font-weight: 700; }
+.section { padding-block: 75px; }
+.section-tinted { background: var(--surface); }
+.section p { max-width: 750px; }
+.card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.card { padding: 25px; background: var(--card); border: 1px solid var(--border); border-radius: 14px; }
+.card p { color: var(--muted); margin-bottom: 0; }
+.text-link { color: var(--accent); font-weight: 700; }
+.site-footer { padding: 25px 0; border-top: 1px solid var(--border); color: var(--muted); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+/* The layout stacks and navigation wraps for phone-sized screens. */
+@media (max-width: 700px) {
+  .navigation { padding-block: 18px; align-items: flex-start; flex-direction: column; }
+  .nav-links { gap: 10px 16px; }
+  .hero { padding-block: 70px; }
+  .section { padding-block: 50px; }
+  .card-grid { grid-template-columns: 1fr; }
+}
