@@ -1,4 +1,3 @@
-// AI-assisted starter example: review and explain these DOM event handlers.
 const themeButton = document.querySelector('#theme-toggle');
 const yearElement = document.querySelector('#year');
 
